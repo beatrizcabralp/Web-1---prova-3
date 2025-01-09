@@ -1,0 +1,60 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+ /***********************banner*****************/
+
+#container-banner
+{
+    height: 75vh;
+    background-image: url(../img/carro5.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.banner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 140px;
+}
+
+.banner h1
+{
+    padding: 0px 0px 20px 0px;
+    font-size: 2.5rem;
+}
+
+.banner p
+{
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+/****************Sobre nós***************/
+
+#sobre-nos
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 100%;
+    word-break: break-word;
+}
+
+#sobre-nos p
+{
+  word-break: break-word;
+  max-width: 100%;
+  white-space: normal;
+}

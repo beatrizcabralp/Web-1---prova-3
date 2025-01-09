@@ -1,0 +1,47 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 12vh;
+    color: #FFFFFF;
+    background-color: black;
+}
+
+nav ul 
+{
+    display: flex;
+}
+
+nav li
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    font-size: 1rem;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:hover
+{
+   text-decoration: underline;
+   text-decoration-color: rgb(158, 91, 222);
+}
+
+h2
+{
+    padding: 0px 10px 0px 10px;
+    font-size: 1.2rem;
+}
