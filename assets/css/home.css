@@ -1,7 +1,12 @@
 body
 {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+}
+
+main
+{
+    max-width: 100%;
 }
 
  /***********************banner*****************/
@@ -14,7 +19,7 @@ body
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+    max-width: 100%;
 }
 
 .banner
@@ -44,17 +49,58 @@ body
 
 #sobre-nos
 {
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
-    flex-direction: column;
     width: 100%;
     word-break: break-word;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #sobre-nos p
 {
   word-break: break-word;
-  max-width: 100%;
+  max-width: 95%;
   white-space: normal;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+}
+
+#sobre-nos h2
+{
+    padding: 25px 0px 25px 30px;
+    margin: 0px;
+    max-width: 90%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+#veiculos-para-locacao
+{
+    width: 100%;
+    word-break: break-word;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#veiculos-para-locacao p
+{
+    word-break: break-word;
+    max-width: 95%;
+    white-space: normal;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+}
+
+#veiculos-para-locacao h2
+{
+    padding: 25px 0px 25px 30px;
+    margin: 0px;
+    max-width: 90%;
+    font-size: 2rem;
+    text-align: left;
 }

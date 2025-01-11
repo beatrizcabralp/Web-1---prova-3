@@ -1,0 +1,17 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    height: 50px;
+}
