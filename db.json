@@ -1,0 +1,34 @@
+{
+    "Carros": [
+        {
+            "marca":"Mercedes", 
+            "modelo": "CLA200", 
+            "ano": 2024, 
+            "cor": "Branco", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://production.autoforce.com/uploads/version/profile_image/11331/comprar-cla-200-amg-line-2025_49512a5ba3.png"
+        },
+        {
+            "marca":"Audi", 
+            "modelo": "R8", 
+            "ano": 2024, 
+            "cor": "Amarelo", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtxKY438exNB7sd6cngZzTG-N_suHVYcK81IXcbtjMs1yHbhymSW0aeKYZzh2kfzTCALp7ekn0EK_Z7s0gqSpA1e9ZuFX5u_1uutvVYgtOiKFpenlD91dpe3zx3jgz3fq09D5yeDdw0wyU/s1600/Audi-R8-brasil+%252827%2529.jpg"
+        },
+        {
+            "marca":"Porsche", 
+            "modelo": "Carrera", 
+            "ano": 2024, 
+            "cor": "Azul", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2024/10/02112543/Porsche-911-Carrera-cupe-e-conversivel-entram-em-pre-venda-no-Brasil.jpg.webp"
+        }
+    ]
+}
