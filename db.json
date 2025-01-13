@@ -29,6 +29,16 @@
             "quilometragem": "0km", 
             "portas": 4,
             "imagem": "https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2024/10/02112543/Porsche-911-Carrera-cupe-e-conversivel-entram-em-pre-venda-no-Brasil.jpg.webp"
+        },
+        {
+            "marca":"BMW", 
+            "modelo": "i8", 
+            "ano": 2024, 
+            "cor": "Laranja", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://s2-autoesporte.glbimg.com/hLB50VllvQBqvfn-Cdn_IeM8BuU=/0x0:2400x1638/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/k/F/b2vtMYTgqUaA122iyCYg/bmw-i8-roadster-8.jpg"
         }
     ]
 }

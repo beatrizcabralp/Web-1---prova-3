@@ -20,12 +20,9 @@ img{
 
 .car-cards-container{
     width: 80%;
-}
-
-.cars-row{
     display: flex;
-    justify-content: space-around;
-    height: 40vh;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .car-card{
