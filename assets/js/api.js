@@ -78,6 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+        // Função para salvar os dados no localStorage
+        function salvarNoLocalStorage(chave, valor) {
+            localStorage.setItem(chave, JSON.stringify(valor));
+        }
+
     // Consumir a API e popular os veículos
     fetch(`${API_URL}/Carros`)
         .then(response => {
@@ -88,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(listaCarros => {
             console.log("Dados recebidos da API:", listaCarros); // Log para inspecionar os dados
+            salvarNoLocalStorage("carros", listaCarros); //Salvando dados da API no LocalStorage
             popularVeiculos(listaCarros); // Passa o array diretamente
         })
         .catch(error => {
@@ -95,3 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
             carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Tente novamente mais tarde.</p>";
         });
 });
+
+const carrosSalvos = localStorage.getItem("carros");
+// const listaCarros = JSON.parse(carrosSalvos);
+console.log(listaCarros)
