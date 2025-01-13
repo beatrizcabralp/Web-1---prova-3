@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const API_URL = "https://my-json-server.typicode.com/beatrizcabralp/Web-1---prova-3";
     const carCardsContainer = document.querySelector(".car-cards-container");
+    const carCardsRow = document.querySelector(".cars-row");
 
     // Função para criar um card de veículo
     function criarCardCarro(carro) {
@@ -65,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function popularVeiculos(listaCarros) {
         carCardsContainer.innerHTML = ""; // Limpar o container antes de adicionar novos cards
 
+        if (!Array.isArray(listaCarros)) {
+            console.error("Os dados recebidos não são uma lista válida de carros.");
+            carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Dados inválidos recebidos.</p>";
+            return;
+        }
+
         listaCarros.forEach(carro => {
             const card = criarCardCarro(carro);
             carCardsContainer.appendChild(card);
@@ -73,23 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Consumir a API e popular os veículos
     fetch(`${API_URL}/Carros`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Erro ao carregar os dados");
-        }
-        return response.json();
-    })
-    .then(json => {
-        console.log("Dados recebidos da API:", json); // Log para inspecionar os dados
-        if (json.Carros && Array.isArray(json.Carros)) {
-            popularVeiculos(json.Carros);
-        } else {
-            throw new Error("Dados inválidos recebidos da API");
-        }
-    })
-    .catch(error => {
-        console.error("Erro ao carregar os veículos:", error);
-        carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Tente novamente mais tarde.</p>";
-    });
-
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao carregar os dados");
+            }
+            return response.json();
+        })
+        .then(listaCarros => {
+            console.log("Dados recebidos da API:", listaCarros); // Log para inspecionar os dados
+            popularVeiculos(listaCarros); // Passa o array diretamente
+        })
+        .catch(error => {
+            console.error("Erro ao carregar os veículos:", error);
+            carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Tente novamente mais tarde.</p>";
+        });
 });
