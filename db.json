@@ -39,6 +39,36 @@
             "quilometragem": "0km", 
             "portas": 4,
             "imagem": "https://s2-autoesporte.glbimg.com/hLB50VllvQBqvfn-Cdn_IeM8BuU=/0x0:2400x1638/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/k/F/b2vtMYTgqUaA122iyCYg/bmw-i8-roadster-8.jpg"
+        },
+        {
+            "marca":"Lamborghini", 
+            "modelo": "Aventador", 
+            "ano": 2024, 
+            "cor": "Cinza", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://cdn.motor1.com/images/mgl/4JyZA/s1/lamborghini-aventador-lp-780-4-ultimae.jpg"
+        },
+        {
+            "marca":"Jaguar", 
+            "modelo": "F-Type", 
+            "ano": 2024, 
+            "cor": "Preto", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://www.agoramotors.com.br/wp-content/uploads/2024/09/jaguar-f-type-2025-na-diagonal-.jpg"
+        },
+        {
+            "marca":"Mustang", 
+            "modelo": "GT", 
+            "ano": 2024, 
+            "cor": "Verde", 
+            "tipo": "Automático", 
+            "quilometragem": "0km", 
+            "portas": 4,
+            "imagem": "https://img2.icarros.com/dbimg/imgnoticia/4/27419_1"
         }
     ]
 }
