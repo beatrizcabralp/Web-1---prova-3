@@ -108,4 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const carrosSalvos = localStorage.getItem("carros");
 // const listaCarros = JSON.parse(carrosSalvos);
+console.log(listaCompleta)
 console.log(listaCarros)

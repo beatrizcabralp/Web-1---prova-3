@@ -15,7 +15,7 @@
         tipo: document.getElementById("tipo").value,
         quilometragem: document.getElementById("quilometragem").value,
         portas: document.getElementById("portas").value,
-        url: document.getElementById("url").value,
+        imagem: document.getElementById("url").value,
       };
   
       // Adicionar o veículo ao vetor
