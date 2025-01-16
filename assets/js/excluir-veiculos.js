@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Adicionar evento de clique no botão
         botao.addEventListener("click", () => {
           alert(`Você excluiu o carro da marca ${carro.marca} e modelo ${carro.modelo}`);
+          excluirCarro(carro.modelo);
           carCard.remove();
         });
 
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem(chave, JSON.stringify(valor));
         }
 
-    // Função para excluir um carro do LocalStorage
+    // Função para excluir um carro do LocalStorage 
     function excluirCarro(modelo) {
         const carros = JSON.parse(localStorage.getItem("carros")) || [];
         const novosCarros = carros.filter(carro => carro.modelo !== modelo);
@@ -136,25 +137,32 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`Carro ${modelo} excluído com sucesso!`);
     }
 
+    const carrosSalvos = JSON.parse(localStorage.getItem("carros"));
+
+    //verificando se já existem carros no local storage
+    if (carrosSalvos && carrosSalvos.length > 0) {
+
+        popularVeiculos(carrosSalvos);
+    } else {
     // Consumir a API e popular os veículos
     fetch(`${API_URL}/Carros`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Erro ao carregar os dados");
-            }
-            return response.json();
-        })
-        .then(listaCarros => {
-            console.log("Dados recebidos da API:", listaCarros); // Log para inspecionar os dados
-            salvarNoLocalStorage("carros", listaCarros); //Salvando dados da API no LocalStorage
-            popularVeiculos(listaCarros); // Passa o array diretamente
-        })
-        .catch(error => {
-            console.error("Erro ao carregar os veículos:", error);
-            carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Tente novamente mais tarde.</p>";
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao carregar os dados");
+        }
+        return response.json();
+    })
+    .then(listaCarros => {
+        console.log("Dados recebidos da API:", listaCarros); // Log para inspecionar os dados
+        salvarNoLocalStorage("carros", listaCarros); //Salvando dados da API no LocalStorage
+        popularVeiculos(listaCarros); // Passa o array diretamente
+    })
+    .catch(error => {
+        console.error("Erro ao carregar os veículos:", error);
+        carCardsContainer.innerHTML = "<p>Erro ao carregar os veículos. Tente novamente mais tarde.</p>";
+    });
+    }
 });
 
-const carrosSalvos = localStorage.getItem("carros");
 // const listaCarros = JSON.parse(carrosSalvos);
 console.log(listaCarros)
